@@ -1,0 +1,41 @@
+{
+  "name": "snooze-stdlib",
+  "version": "0.1.9",
+  "description": "A set of utilities for a snooze project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamchairs/snooze-stdlib"
+  },
+  "keywords": [
+    "snooze-stdlib",
+    "snooze",
+    "utlities",
+    "framework",
+    "rest",
+    "restful"
+  ],
+  "author": {
+    "name": "Micah Williamson"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamchairs/snooze-stdlib/issues"
+  },
+  "homepage": "http://snoozejs.org/snooze-stdlib",
+  "dependencies": {
+    "q": "^1.0.1",
+    "lodash": "^2.4.1",
+    "validator": "^3.12.0",
+    "mmmagic": "^0.3.8",
+    "ncp": "^0.5.1",
+    "sequelize": "^1.7.9"
+  },
+  "readme": "snooze-stdlib\n=============\n\nNew site with better documentation now up!\n\nhttp://snoozejs.org/snooze-stdlib\n\nThe Snooze Standard Library is a module that includes helpful services that most server applications will use.\n\n## Installation\n\nInstall snooze-stdlib alongside snooze.\n\n```\nnpm install snooze-stdlib\n```\n\nThe directory structure should look something like-\n\n```\nmain.js\nnode_modules\\\n\tsnooze\\\n\tsnooze-stdlib\\\n```\n\n## Add Module Dependency\n\n```\nvar snooze = require('snooze');\n\nsnooze.module('myServer', ['snooze-stdlib']);\n```\n\n## You're Done!\n\nThat's it. Now you can inject snooze-stdlib services in any of your controllres, services, and validators!\n\n```\nsnooze.module('myServer').controller('MyCtrl', function($q) {\n\treturn {\n\t\ttest: function() {\n\t\t\tvar deferred = $q.defer();\n\n\t\t\tsetTimeout(function() {\n\t\t\t\tdeferred.resolve('Resolved after 1 second.');\n\t\t\t}, 1000);\n\n\t\t\treturn deferred.promise;\n\t\t}\t\t\n\t};\n});\n```\n\n# Current Library\n\nInstead of updating this here I'll be updating the snoozejs.org site\n",
+  "readmeFilename": "README.md",
+  "_id": "snooze-stdlib@0.1.8",
+  "_from": "snooze-stdlib@"
+}
