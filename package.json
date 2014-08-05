@@ -1,6 +1,6 @@
 {
   "name": "snooze-stdlib",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "A set of utilities for a snooze project.",
   "main": "index.js",
   "scripts": {
